@@ -1,0 +1,21 @@
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:2.44.7
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:5678:5678"
+    environment:
+      N8N_HOST: localhost
+      N8N_PORT: "5678"
+      N8N_PROTOCOL: http
+      NODE_ENV: production
+      GENERIC_TIMEZONE: Asia/Kolkata
+      TZ: Asia/Kolkata
+      N8N_ENCRYPTION_KEY: "${N8N_ENCRYPTION_KEY:?Set N8N_ENCRYPTION_KEY in the ignored .env file}"
+      N8N_DIAGNOSTICS_ENABLED: "false"
+      N8N_PERSONALIZATION_ENABLED: "false"
+    volumes:
+      - n8n_data:/home/node/.n8n
+
+volumes:
+  n8n_data:

@@ -1,0 +1,24 @@
+# Local secrets and n8n configuration
+.env
+.env.*
+!.env.example
+n8n_data/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.log
+
+# Local exports, backups, and generated files
+backups/
+executions/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
