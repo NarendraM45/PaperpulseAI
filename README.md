@@ -14,6 +14,11 @@ Discover papers in your fields, get an evidence-grounded research brief, and rec
 
 </div>
 
+<p align="center">
+  <img src="assets/paperpulse-demo.gif" alt="Looping preview of the PaperPulse AI n8n workflow" width="800">
+</p>
+<p align="center">Looping, silent preview · <a href="paperpulse_ai_vid.mp4">Open or download the original MP4</a></p>
+
 PaperPulse AI is a self-hosted **n8n workflow** that checks selected arXiv categories every morning, removes papers it has already processed, summarizes new abstracts with an OpenRouter model, and sends researcher-friendly digests through a Telegram bot.
 
 > **Designed for:** researchers and curious readers who want a focused view of new work without manually checking several arXiv feeds.
@@ -208,8 +213,11 @@ The Docker setup is local-only by default. Do not expose the n8n editor to the p
 .
 ├── .env.example       # Safe starter for the local encryption key
 ├── .gitignore         # Excludes secrets and local n8n data
+├── assets/
+│   └── paperpulse-demo.gif # Optimized looping README preview
 ├── docker-compose.yml # Pinned, localhost-only n8n service
 ├── LICENSE.md         # MIT License
+├── paperpulse_ai_vid.mp4 # Original demo video
 ├── README.md
 └── workflow.json      # Importable PaperPulse n8n workflow
 ~~~
